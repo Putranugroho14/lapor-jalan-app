@@ -39,8 +39,43 @@ function ABTestingControl() {
         });
       }
     };
+
+    // Easter egg untuk HP: Ketuk logo/pojok kiri atas layar 5 kali secara cepat
+    let lastTap = 0;
+    let tapCount = 0;
+    const handleGlobalClick = (e) => {
+      // Area logo: pojok kiri atas (lebar 200px, tinggi 80px)
+      const isLogoArea = e.clientX < 200 && e.clientY < 80;
+      if (isLogoArea) {
+        const now = Date.now();
+        if (now - lastTap < 400) {
+          tapCount++;
+          if (tapCount >= 5) {
+            setIsHidden((prev) => {
+              const next = !prev;
+              localStorage.setItem('ab_control_hidden', next ? 'true' : 'false');
+              if (next) {
+                showAlert("A/B Testing Control disembunyikan.", "info");
+              } else {
+                showAlert("A/B Testing Control ditampilkan kembali.", "success");
+              }
+              return next;
+            });
+            tapCount = 0;
+          }
+        } else {
+          tapCount = 1;
+        }
+        lastTap = now;
+      }
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('click', handleGlobalClick);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('click', handleGlobalClick);
+    };
   }, [showAlert]);
 
   const handleHide = () => {
