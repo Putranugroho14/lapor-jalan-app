@@ -207,15 +207,6 @@ function Peta() {
 
   return (
     <>
-      <style>
-        {`
-          select option {
-            background-color: #1a1a1a !important;
-            color: #fff !important;
-          }
-        `}
-      </style>
-
       <div style={containerStyle}>
         <div style={headerStyle}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>

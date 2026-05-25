@@ -271,10 +271,6 @@ function AdminReport() {
             filter: invert(1);
             cursor: pointer;
           }
-          select option {
-            background-color: #1a1a1a !important;
-            color: #fff !important;
-          }
           tr:hover td {
             background: rgba(255, 255, 255, 0.05) !important;
           }

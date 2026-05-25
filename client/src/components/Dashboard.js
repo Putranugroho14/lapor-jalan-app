@@ -428,10 +428,6 @@ function Dashboard() {
               grid-template-columns: 1fr !important;
             }
           }
-          select option {
-            background-color: #1a1a1a !important;
-            color: #fff !important;
-          }
         `}
       </style>
 

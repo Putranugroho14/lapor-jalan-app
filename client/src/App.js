@@ -110,6 +110,35 @@ function App() {
           ::-webkit-scrollbar-thumb:hover {
             background: rgba(0, 122, 255, 0.5);
           }
+
+          /* Custom Select Dropdown Styling to fix iOS/Android White Background issue */
+          select {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            background-color: #222222 !important;
+            color: #ffffff !important;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 12px center !important;
+            padding-right: 36px !important;
+          }
+
+          /* Desktop select option styles */
+          @media (min-width: 769px) {
+            select option {
+              background-color: #222222 !important;
+              color: #ffffff !important;
+            }
+          }
+
+          /* Mobile select option styles to prevent white-on-white text */
+          @media (max-width: 768px) {
+            select option {
+              background-color: #ffffff !important;
+              color: #121212 !important;
+            }
+          }
         `}
       </style>
 <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
