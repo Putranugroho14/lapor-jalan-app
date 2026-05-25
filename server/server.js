@@ -19,19 +19,26 @@ if (!process.env.DATABASE_URL && process.env.NODE_ENV === 'production') {
     process.exit(1);
 }
 
-// --- CORS ---
-// Izinkan origin yang terdaftar. Set FRONTEND_URL di env var production.
-const allowedOrigins = [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : []),
-];
-
 app.use(cors({
     origin: (origin, callback) => {
-        // Izinkan request tanpa origin (mobile apps, Postman, curl, server-to-server)
+        // Izinkan request tanpa origin (mobile apps, Postman, curl, dll)
         if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin)) return callback(null, true);
+        
+        // Izinkan localhost
+        if (origin.startsWith('http://localhost') || origin.startsWith('http://127.0.0.1')) {
+            return callback(null, true);
+        }
+        
+        // Izinkan jika cocok dengan FRONTEND_URL (jika diset)
+        if (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL) {
+            return callback(null, true);
+        }
+        
+        // Izinkan subdomain vercel.app secara otomatis untuk production
+        if (origin.endsWith('.vercel.app')) {
+            return callback(null, true);
+        }
+        
         callback(new Error(`CORS: Origin '${origin}' tidak diizinkan.`));
     },
     credentials: true,
