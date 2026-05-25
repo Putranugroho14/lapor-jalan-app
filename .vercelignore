@@ -1,0 +1,12 @@
+# Vercel Ignore Patterns
+node_modules
+client/node_modules
+server/node_modules
+database.sqlite
+server/database.sqlite
+.env
+server/.env
+.git
+build
+client/build
+*.log
