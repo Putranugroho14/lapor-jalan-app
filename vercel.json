@@ -19,6 +19,10 @@
             "destination": "/api/index.js"
         },
         {
+            "source": "/static/:path*",
+            "destination": "/client/static/:path*"
+        },
+        {
             "source": "/(.*)",
             "destination": "/client/index.html"
         }
