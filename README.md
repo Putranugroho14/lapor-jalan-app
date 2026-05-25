@@ -185,8 +185,8 @@ MIT License
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
+**Putranugroho14**
+- GitHub: [@Putranugroho14](https://github.com/Putranugroho14)
 
 ## 🙏 Acknowledgments
 
