@@ -1,0 +1,128 @@
+================================================================================
+BAB: METODOLOGI DAN PROSEDUR PENGUJIAN A/B TESTING
+================================================================================
+
+Sub-bab ini menjelaskan rancangan metodologi, instrumen, kriteria partisipan, dan prosedur langkah-demi-langkah pelaksanaan pengujian A/B Testing pada aplikasi LaporJalan. Pengujian ini difokuskan pada tiga skenario utama (Use Case) untuk membandingkan varian baseline (Varian A) dengan varian challenger (Varian B).
+
+--------------------------------------------------------------------------------
+1. DESAIN EKSPERIMEN
+--------------------------------------------------------------------------------
+
+Metode eksperimen yang digunakan dalam penelitian ini adalah "Within-Subject Design" (Desain Intra-Subjek). Dalam desain ini, setiap partisipan akan menguji kedua variasi antarmuka (Varian A dan Varian B) untuk seluruh Use Case.
+
+Kelebihan utama Within-Subject Design adalah:
+* Meminimalkan variasi antar-subjek (inter-subject variability). Perbedaan individu dalam hal keahlian teknologi, latar belakang, dan ketangkasan fisik tidak akan memengaruhi perbandingan performa antar varian karena partisipan bertindak sebagai kontrol bagi dirinya sendiri.
+* Membutuhkan ukuran sampel yang lebih sedikit dibandingkan Between-Subject Design untuk mencapai kekuatan statistik (statistical power) yang setara.
+
+Untuk mengatasi kelemahan utama desain ini, yaitu bias efek urutan (Order Effect) atau efek pembelajaran (Learning Effect) — di mana partisipan cenderung lebih cepat menyelesaikan tugas pada varian kedua karena sudah mempelajari sistem pada varian pertama — diterapkan teknik penyeimbangan urutan (Counterbalancing). Partisipan dibagi secara acak ke dalam dua kelompok urutan pengujian:
+
+* Kelompok Urutan 1: Menguji Varian A terlebih dahulu, kemudian Varian B (A -> B).
+* Kelompok Urutan 2: Menguji Varian B terlebih dahulu, kemudian Varian A (B -> A).
+
+--------------------------------------------------------------------------------
+2. PARTISIPAN EKSPERIMEN
+--------------------------------------------------------------------------------
+
+Pengujian ini melibatkan sebanyak 16 orang partisipan. Pemilihan partisipan dilakukan menggunakan metode purposive sampling dengan kriteria inklusi sebagai berikut:
+1. Berusia antara 17 - 40 tahun.
+2. Memiliki dan aktif menggunakan smartphone berbasis Android atau iOS dalam kehidupan sehari-hari (minimal 2 jam per hari).
+3. Bersedia mengikuti seluruh rangkaian sesi pengujian dari awal hingga akhir.
+4. Belum pernah melihat atau berinteraksi dengan prototipe aplikasi LaporJalan sebelumnya (untuk menjamin orisinalitas respon pertama).
+
+--------------------------------------------------------------------------------
+3. ALAT DAN LINGKUNGAN PENGUJIAN
+--------------------------------------------------------------------------------
+
+Untuk meminimalkan variabel pengganggu (confounding variables), lingkungan pengujian distandardisasi sebagai berikut:
+* Perangkat Keras (Hardware): Pengujian dijalankan menggunakan satu unit gawai (smartphone) yang disediakan oleh penguji dengan spesifikasi layar minimal 6 inci untuk menyimulasikan pengalaman penggunaan mobile secara riil.
+* Perangkat Lunak (Software): Aplikasi dijalankan pada peramban mobile (Chrome/Safari) yang telah dibersihkan cache-nya sebelum setiap sesi dimulai.
+* Alat Ukur Waktu: Pengukuran waktu reaksi menggunakan stopwatch digital dengan ketelitian milidetik, dibantu dengan aplikasi perekam layar (screen recorder) aktif untuk verifikasi cadangan durasi pengerjaan pasca-eksperimen.
+* Kondisi Ruangan: Eksperimen dilakukan di ruangan yang tenang dengan pencahayaan konisten dan koneksi internet Wi-Fi yang stabil guna menghindari latensi jaringan.
+
+--------------------------------------------------------------------------------
+4. PROSEDUR DETAIL PELAKSANAAN PENGUJIAN
+--------------------------------------------------------------------------------
+
+Setiap sesi pengujian berlangsung secara individual dengan didampingi oleh seorang moderator/penguji. Prosedur dibagi menjadi tiga tahap utama:
+
+TATA CARA UMUM SESI:
+1. Pembukaan dan Briefing: Moderator menyambut partisipan, menjelaskan tujuan umum eksperimen (menguji kegunaan aplikasi, bukan kemampuan pengguna), meminta persetujuan perekaman layar, dan membacakan petunjuk umum.
+2. Pelaksanaan Usecase: Partisipan mengerjakan tugas UC1, UC2, dan UC3 secara berurutan sesuai urutan varian kelompoknya (Grup 1 atau Grup 2).
+3. Pengisian Kuesioner: Partisipan langsung mengisi skala kenyamanan subjektif sesaat setelah menyelesaikan satu tugas pada suatu varian sebelum berpindah ke tugas/varian berikutnya.
+
+---
+
+### PROSEDUR DETAIL USE CASE 1 (UC1) -- NAVIGASI MULAI MELAPOR
+Tujuan: Menguji pengaruh letak tombol lapor terhadap kecepatan jangkauan (TTFC) dan kenyamanan motorik pengguna.
+
+Langkah-langkah:
+1. Inisialisasi: Moderator mematikan cache peramban, memastikan aplikasi berada pada halaman Beranda/Dashboard awal, dan mengatur kontrol varian sesuai urutan grup partisipan.
+2. Instruksi Tugas: Moderator membacakan instruksi: "Bayangkan Anda ingin melaporkan jalan rusak baru yang Anda temui. Silakan cari dan klik tombol untuk mulai melapor."
+3. Pengukuran Waktu (TTFC): 
+   * Tombol stopwatch ditekan (Mulai) segera setelah kalimat instruksi selesai dibacakan.
+   * Tombol stopwatch ditekan (Berhenti) tepat ketika jari partisipan menyentuh tombol lapor (Tombol "+ Lapor" di navbar atas pada Varian A, atau tombol melayang FAB di kanan bawah pada Varian B).
+4. Evaluasi Subjektif: Partisipan diminta menilai kenyamanan jangkauan fisik tombol menggunakan Skala Likert 5 poin:
+   - Skor 1: Sangat Tidak Nyaman
+   - Skor 2: Tidak Nyaman
+   - Skor 3: Cukup Nyaman
+   - Skor 4: Nyaman
+   - Skor 5: Sangat Nyaman
+5. Transisi Varian: Moderator memberikan jeda selama 1 menit, mengalihkan aplikasi ke varian berikutnya, mengembalikan ke halaman Beranda, dan mengulangi langkah 2 sampai 4.
+
+---
+
+### PROSEDUR DETAIL USE CASE 2 (UC2) -- PENGISIAN FORM PELAPORAN
+Tujuan: Mengevaluasi pengaruh format formulir (Single-page vs 3-Step Wizard) terhadap durasi pengisian (TTS) dan beban kognitif pengguna.
+
+Langkah-langkah:
+1. Inisialisasi: Moderator mengarahkan aplikasi ke halaman awal Formulir Pelaporan yang masih kosong dan mengatur varian UI.
+2. Penyediaan Data Standar: Partisipan diberikan selembar kertas panduan yang berisi data yang WAJIB diinputkan ke dalam form, yaitu:
+   * Foto kerusakan jalan rusak (disediakan berkas gambar yang siap diunggah di galeri gawai).
+   * Teks deskripsi kerusakan: "Terdapat lubang sedalam 15 cm di tengah jalan raya dekat pertigaan."
+3. Instruksi Tugas: Moderator membacakan skenario: "Bayangkan kamu sedang melewati jalan di sekitar tempat tinggalmu dan menemukan jalan yang rusak cukup parah. Kamu ingin melaporkan kerusakan tersebut melalui aplikasi ini. Silakan isi formulir ini berdasarkan panduan data yang diberikan dan tekan tombol kirim."
+4. Pengukuran Waktu (TTS):
+   * Stopwatch dinyalakan ketika instruksi selesai dibacakan.
+   * Partisipan melakukan penginputan (lokasi, foto, deskripsi).
+   * Stopwatch dimatikan tepat saat jari partisipan menekan tombol kirim laporan di akhir formulir.
+5. Evaluasi Subjektif: Partisipan mengisi skala kuesioner Likert 5 poin: "Seberapa nyaman kamu mengisi form pelaporan tadi?" (Skor 1-5, Sangat Tidak Nyaman - Sangat Nyaman).
+6. Transisi Varian: Moderator memberikan jeda 1 menit, membersihkan data formulir, mengubah varian UI, dan mengulangi langkah 2 sampai 5.
+
+---
+
+### PROSEDUR DETAIL USE CASE 3 (UC3) -- MELACAK STATUS RIWAYAT LAPORAN
+Tujuan: Menguji visualisasi status laporan (Static Badge vs Interactive Timeline) terhadap kenyamanan pemantauan dan kejelasan informasi (guna mendeteksi Novelty Effect).
+
+Langkah-langkah:
+1. Inisialisasi: Moderator membuka halaman Detail Riwayat Laporan pada varian UI yang sesuai.
+2. Proses Membaca: Partisipan diminta untuk memperhatikan dan membaca informasi status laporan tersebut secara mandiri selama 10 detik tanpa intervensi. Penguji menggunakan stopwatch untuk membatasi waktu baca tepat 10 detik.
+3. Kuesioner Evaluasi: Layar gawai langsung ditutup/disembunyikan oleh moderator setelah 10 detik. Partisipan diminta menjawab instrumen evaluasi yang terdiri dari tiga bagian:
+   * Bagian 1 (Kenyamanan): "Seberapa nyaman tampilan status laporan tadi dalam membantu kamu memantau progres laporan?" (Likert 1-5, Sangat Tidak Nyaman - Sangat Nyaman).
+   * Bagian 2 (Faktor Pengaruh): "Bagian apa yang paling memengaruhi kenyamananmu saat melihat status laporan? Pilihan: (A) Posisi mudah ditemukan, (B) Tahapan progres terlihat jelas, (C) Tampilan status mudah dipahami, (D) Desain menarik dan nyaman dilihat."
+   * Bagian 3 (Pertanyaan Faktual - Validasi Pemahaman):
+     - Untuk Varian A: "Setelah melihat tampilan tadi, laporan kamu saat ini sedang ada di tahap apa? Pilihan: (A) Laporan Masuk, (B) Dalam Proses Penanganan, (C) Laporan Selesai Diperbaiki." (Kunci jawaban betul: B)
+     - Untuk Varian B: "Dari tampilan tadi, masih ada berapa tahap lagi sebelum laporanmu selesai diproses? Pilihan: (A) Tidak ada, (B) Satu tahap lagi, (C) Dua tahap lagi." (Kunci jawaban betul: B)
+4. Transisi Varian: Moderator membuka kembali layar gawai, mengubah varian UI, dan mengulangi langkah 1 sampai 3.
+
+--------------------------------------------------------------------------------
+5. METODE PENGENDALIAN BIAS DAN VALIDITAS EKSPERIMEN
+--------------------------------------------------------------------------------
+
+Untuk memastikan bahwa data perbedaan performa murni dipengaruhi oleh perbedaan rancangan antarmuka (Varian A vs Varian B), kami mengontrol beberapa potensi bias berikut:
+
+1. Bias Efek Urutan (Order Effect): Dikontrol penuh melalui teknik counterbalancing (penyilangan urutan tes antar Grup 1 dan Grup 2).
+2. Bias Ketangkasan Mengetik (Typing Speed Bias): Pada UC2, variasi kecepatan mengetik keyboard dan pemilihan gambar dikontrol dengan mewajibkan semua partisipan menginputkan teks deskripsi yang sama persis dan menggunakan file foto yang sama yang sudah disiapkan di galeri handphone.
+3. Bias Kondisi Awal (Initial State Bias): Pada UC1, titik awal pengerjaan diseragamkan pada halaman Dashboard/Beranda utama agar area pandang pertama partisipan homogen.
+4. Bias Efek Keberuan (Novelty Effect Bias): Pada UC3, bias estetika baru diidentifikasi dengan melakukan analisis silang antara skor kenyamanan visual (subjektif) dengan jawaban pertanyaan faktual (objektif). Jika suatu varian mendapatkan skor kenyamanan yang tinggi namun akurasi jawaban faktualnya rendah, maka desain tersebut terbukti mengalami bias Novelty Effect.
+
+--------------------------------------------------------------------------------
+6. RENCANA ANALISIS DATA
+--------------------------------------------------------------------------------
+
+Data kuantitatif yang terkumpul dari 16 partisipan akan dianalisis melalui beberapa tahapan:
+1. Statistik Deskriptif: Menghitung nilai rata-rata (mean) dan standar deviasi untuk metrik waktu (TTFC & TTS) serta skor kenyamanan Likert untuk masing-masing Varian A dan Varian B.
+2. Statistik Inferensial (Uji Hipotesis): 
+   * Melakukan uji normalitas data (Shapiro-Wilk) pada data waktu (TTFC & TTS).
+   * Jika data berdistribusi normal, gunakan Uji Paired t-Test (uji-t berpasangan) untuk membandingkan signifikansi perbedaan performa antara Varian A dan Varian B pada signifikansi alpha = 0.05.
+   * Jika data tidak berdistribusi normal, gunakan Uji Wilcoxon Signed-Rank Test sebagai alternatif non-parametrik.
+3. Analisis Frekuensi Faktor: Menggunakan analisis persentase distribusi pilihan faktor kenyamanan (UC3 Bagian 2) untuk menyusun rekomendasi desain akhir.
+4. Analisis Silang Novelty Effect: Melakukan komparasi matriks antara skor Likert dan akurasi jawaban faktual untuk menguji efektivitas penyerapan informasi dari masing-masing desain.
