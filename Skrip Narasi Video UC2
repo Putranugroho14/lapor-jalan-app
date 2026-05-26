@@ -1,0 +1,82 @@
+# SKRIP NARASI VIDEO — UC2
+## Pengisian Form Pelaporan
+### A/B Testing — Aplikasi Lapor Jalan Rusak
+
+> **Dibawakan oleh**: [Nama Anggota UC2]
+> **Durasi Estimasi**: 2–3 menit
+> **Fokus**: Tujuan UC2, Perbandingan Single-page vs 3-Step Wizard, Metrik TTS & Kenyamanan, serta Standardisasi Input
+
+---
+
+## ▶ PEMBUKA
+
+> *"Use Case kedua yang kami uji adalah UC2 — **Pengisian Form Pelaporan**.*
+>
+> *Di sini kita ingin menjawab pertanyaan: apakah format tata letak formulir berpengaruh secara nyata terhadap kecepatan pengisian data serta kenyamanan kognitif yang dirasakan oleh pengguna?"*
+
+---
+
+## ▶ BAGIAN 1 — DASAR PENENTUAN UI VARIASI
+
+> **[Visual: Screenshot Varian A (Form Satu Halaman) dan Varian B (Form 3-Langkah) berdampingan]**
+
+> *"Pada **Varian A**, kami menggunakan pendekatan **Single-Page Form**, di mana semua kolom isian — mulai dari lokasi, unggah foto, hingga deskripsi detail jalan rusak — diletakkan di satu halaman yang dapat digulir.*
+>
+> *Pola ini sangat lazim dan memberikan keleluasaan bagi pengguna untuk melihat seluruh isian sekaligus.*
+>
+> *Sebagai *challenger*, di **Varian B** kami menerapkan **3-Step Wizard Form**. Formulir dipecah menjadi tiga langkah berurutan: Langkah 1 untuk penentuan Lokasi, Langkah 2 untuk Unggah Bukti Foto, dan Langkah 3 untuk Deskripsi Laporan.*
+>
+> *Mengapa kami membaginya menjadi tiga langkah?*
+>
+> *Keputusan ini didasari oleh teori **Beban Kognitif (Cognitive Load Theory)**. Formulir panjang yang menumpuk di satu layar seringkali menimbulkan kelelahan visual dan kebingungan bagi pengguna. Dengan membaginya menjadi beberapa tahapan terfokus, pengguna dapat berkonsentrasi menyelesaikan satu tugas spesifik sebelum melangkah ke tugas berikutnya.*
+>
+> *Kami ingin menguji apakah pemecahan langkah ini benar-benar mempermudah pengguna, ataukah justru memperlambat karena adanya transisi antar halaman."*
+
+---
+
+## ▶ BAGIAN 2 — METRIK DAN ALASAN PEMILIHANNYA
+
+> **[Visual: Tabel metrik UC2]**
+
+> *"Untuk mengukur efektivitas dan kenyamanan pengisian formulir ini, kami menggunakan dua metrik utama: **Time to Submit (TTS)** dan **Skala Likert Kenyamanan 1–5**.*
+
+### Time to Submit (TTS)
+
+> *"**Mengapa TTS?***
+>
+> *TTS mengukur durasi penyelesaian tugas pengisian formulir secara penuh (dari saat formulir dibuka hingga tombol kirim diklik). Ini adalah indikator performa efisiensi yang bersifat objektif.*
+>
+> *Dengan mengukur TTS, kami dapat mengetahui secara pasti format mana yang membutuhkan waktu pengerjaan lebih singkat dari perspektif interaksi pengguna.*
+
+### Likert 1–5 — Kenyamanan Mengisi Form
+
+> *"**Mengapa Likert Kenyamanan?***
+>
+> *Karena kecepatan pengisian (TTS) tidak selalu mencerminkan kenyamanan mental. Pengguna mungkin bisa mengisi form satu halaman dengan cepat karena terburu-buru, tetapi merasa prosesnya membuat tertekan atau membingungkan.*
+>
+> *Pertanyaan kuesioner Likert yang kami gunakan adalah: 'Seberapa nyaman kamu mengisi form pelaporan tadi?' dengan rentang skor 1 (Sangat Tidak Nyaman) hingga 5 (Sangat Nyaman).*
+>
+> *Kombinasi antara TTS dan Likert akan menghasilkan temuan yang seimbang: kita dapat mengidentifikasi desain yang tidak hanya cepat diselesaikan, tetapi juga menyenangkan dan minim tekanan kognitif bagi pengguna."*
+
+---
+
+## ▶ BAGIAN 3 — PROSEDUR UC2
+
+> *"Prosedur pengujian UC2 memerlukan perhatian ekstra pada aspek kontrol eksperimen agar data murni.*
+>
+> *Sesi dimulai dengan menempatkan partisipan pada halaman formulir kosong yang baru dibuka.*
+>
+> *Moderator membacakan skenario tugas berikut:*
+> *'Bayangkan kamu sedang melewati jalan di sekitar tempat tinggalmu dan menemukan jalan yang rusak cukup parah. Kamu ingin melaporkan kerusakan tersebut melalui aplikasi ini. Coba laporkan kerusakan jalan yang kamu temukan tadi.'*
+>
+> *Untuk meminimalkan bias mengetik dan mencari foto (karena setiap partisipan memiliki kecepatan mengetik yang berbeda), kami melakukan **standardisasi data input**.*
+> *Semua partisipan diberikan contoh teks deskripsi yang sama untuk disalin dan berkas foto jalan rusak yang sama untuk diunggah.*
+>
+> *Timer dimulai tepat saat instruksi selesai dibacakan, dan dihentikan begitu tombol 'Kirim' ditekan di akhir formulir.*
+>
+> *Setelah menekan kirim, partisipan langsung mengisi kuesioner Likert sebelum moderator mengubah varian menggunakan controller untuk pengujian berikutnya dengan metode counterbalancing."*
+
+---
+
+> **[SELESAI — UC2]**
+> *"Selanjutnya, rekan saya akan memaparkan Use Case 3: Melacak Status Riwayat Laporan."*

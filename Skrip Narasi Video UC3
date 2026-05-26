@@ -1,0 +1,86 @@
+# SKRIP NARASI VIDEO — UC3
+## Melacak Status Riwayat Laporan
+### A/B Testing — Aplikasi Lapor Jalan Rusak
+
+> **Dibawakan oleh**: [Nama Anggota UC3]
+> **Durasi Estimasi**: 2–3 menit
+> **Fokus**: Tujuan UC3, Perbandingan Static Badge vs Interactive Timeline, Deteksi Novelty Effect, dan Analisis Pemahaman Faktual
+
+---
+
+## ▶ PEMBUKA
+
+> *"Use Case ketiga sekaligus terakhir yang kami uji adalah UC3 — **Melacak Status Riwayat Laporan**.*
+>
+> *Tujuan utama dari pengujian ini adalah untuk mengetahui apakah format penyajian informasi status laporan memengaruhi tingkat kenyamanan visual serta akurasi pemahaman pengguna saat memantau progres aduan mereka."*
+
+---
+
+## ▶ BAGIAN 1 — DASAR PENENTUAN UI VARIASI
+
+> **[Visual: Screenshot Varian A (Badge Statis) dan Varian B (Timeline Visual) berdampingan]**
+
+> *"Pada **Varian A**, status pelaporan ditampilkan secara konvensional menggunakan **Static Text Badge** (misal label teks berwarna: 'PENDING', 'PROSES', atau 'SELESAI').*
+>
+> *Tampilan ini sangat ringkas dan efisien tempat, tetapi kurang memberikan konteks alur pengerjaan secara keseluruhan.*
+>
+> *Sebagai *challenger*, pada **Varian B** kami menyajikan **Interactive Visual Timeline**. Varian B memvisualisasikan seluruh tahapan laporan secara vertikal, mulai dari laporan masuk, proses verifikasi, penugasan dinas, hingga pengerjaan selesai, lengkap dengan penanda interaktif.*
+>
+> *Keputusan membandingkan kedua varian ini didasari oleh kebutuhan untuk menyeimbangkan antara estetika modern dan kegunaan nyata.*
+>
+> *Di satu sisi, timeline visual (Varian B) terlihat sangat menarik dan modern. Namun di sisi lain, kami ingin menguji apakah keindahan visual tersebut benar-benar mempermudah pengguna dalam memahami progres laporan, ataukah justru memicu kebingungan jika dibandingkan dengan kesederhanaan badge teks statis (Varian A)."*
+
+---
+
+## ▶ BAGIAN 2 — METRIK DAN ALASAN PEMILIHANNYA
+
+> **[Visual: Tabel metrik UC3 & Contoh Pertanyaan Faktual]**
+
+> *"Untuk mengukur kualitas pengalaman pengguna pada UC3, kami menggunakan tiga instrumen metrik yang saling berkaitan: **Skala Likert Kenyamanan**, **Faktor Pengaruh Pilihan**, dan **Pertanyaan Pemahaman Faktual**.*
+
+### 1. Likert 1–5 — Kenyamanan Memantau Progres
+
+> *"Pertanyaan pertamanya adalah: 'Seberapa nyaman tampilan status laporan tadi dalam membantu kamu memantau progres laporan?' dengan skala 1 (Sangat Tidak Nyaman) hingga 5 (Sangat Nyaman).*
+>
+> *Ini mengukur persepsi kenyamanan subjektif pengguna terhadap aspek visual masing-masing varian.*
+
+### 2. Pertanyaan Pilihan (Faktor Kenyamanan)
+
+> *"Kami juga menanyakan faktor utama apa yang paling memengaruhi kenyamanan mereka (apakah karena kemudahan menemukan posisi status, kejelasan tahapan, kemudahan pemahaman, atau keindahan desain).*
+>
+> *Metrik pilihan ini penting untuk mendiagnosis aspek visual mana dari Varian A atau B yang paling berkontribusi pada kenyamanan pengguna.*
+
+### 3. Pertanyaan Faktual (Deteksi Novelty Effect)
+
+> *"**Mengapa pertanyaan faktual ditambahkan?***
+>
+> *Ini adalah instrumen krusial untuk mendeteksi **Novelty Effect (Efek Keberuan)**. Novelty effect terjadi ketika pengguna menilai suatu desain baru sangat bagus hanya karena terlihat modern dan keren, padahal secara fungsional informasi di dalamnya sulit dipahami.*
+>
+> *Oleh karena itu, kami memberikan pertanyaan objektif:*
+> * Untuk Varian A: 'Laporan Anda saat ini sedang ada di tahap apa?'
+> * Untuk Varian B: 'Ada berapa tahap lagi sebelum laporan Anda selesai diproses?'
+>
+> *Jika analisis silang menunjukkan skor Likert Varian B sangat tinggi namun partisipan banyak menjawab salah pada pertanyaan faktualnya, itu adalah indikasi kuat adanya Novelty Effect. Desain tersebut menarik secara kosmetik, tetapi gagal secara fungsional."*
+
+---
+
+## ▶ BAGIAN 3 — PROSEDUR UC3
+
+> *"Prosedur pengujian UC3 berfokus pada kemampuan kognitif membaca informasi visual.*
+>
+> *Pertama, partisipan ditempatkan pada halaman Detail Riwayat Laporan.*
+>
+> *Moderator meminta partisipan untuk memperhatikan dan membaca status progres laporan tersebut selama kurang lebih 10 detik tanpa memberikan intervensi.*
+>
+> *Setelah waktu membaca selesai, moderator langsung menyembunyikan layar atau mengarahkan partisipan ke lembar kuesioner.*
+>
+> *Partisipan diminta mengisi tiga bagian pertanyaan secara berurutan: dimulai dari skala Likert kenyamanan (1-5), memilih satu faktor kenyamanan paling dominan, dan terakhir menjawab pertanyaan faktual.*
+>
+> *Setelah kuesioner varian pertama selesai diisi, moderator mengganti varian ke varian berikutnya sesuai urutan grup counterbalancing, dan mengulangi langkah membaca serta kuesioner yang sama.*
+>
+> *Data skor Likert rata-rata dan persentase akurasi jawaban faktual kemudian akan direkapitulasi untuk dianalisis silang."*
+
+---
+
+> **[SELESAI — UC3]**
+> *"Demikian pemaparan persiapan pengujian A/B testing untuk ketiga use case aplikasi LaporJalan. Terima kasih atas perhatian Anda."*
