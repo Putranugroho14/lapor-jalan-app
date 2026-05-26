@@ -21,9 +21,11 @@ Mengetahui apakah peletakan tombol lapor berpengaruh terhadap kecepatan jangkaua
 
 #### Pertanyaan Skala Likert:
 > **"Seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan?"**
-* **Skor 1:** Tidak Nyaman
-* **Skor 2:** Cukup Nyaman
-* **Skor 3:** Sangat Nyaman
+* **Skor 1:** Sangat Tidak Nyaman
+* **Skor 2:** Tidak Nyaman
+* **Skor 3:** Cukup Nyaman
+* **Skor 4:** Nyaman
+* **Skor 5:** Sangat Nyaman
 
 ---
 
@@ -72,7 +74,7 @@ flowchart TD
 
 Gunakan tabel di bawah ini untuk mencatat hasil pengujian dari setiap partisipan:
 
-| ID Partisipan | Grup | TTFC Varian A (detik) | Skor Likert Varian A (1-3) | TTFC Varian B (detik) | Skor Likert Varian B (1-3) | Catatan Kualitatif / Observasi |
+| ID Partisipan | Grup | TTFC Varian A (detik) | Skor Likert Varian A (1-5) | TTFC Varian B (detik) | Skor Likert Varian B (1-5) | Catatan Kualitatif / Observasi |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | P01 | Grup 1 | | | | | |
 | P02 | Grup 2 | | | | | |
