@@ -1,0 +1,80 @@
+# SKRIP NARASI VIDEO — UC1
+## Navigasi Mulai Melapor
+### A/B Testing — Aplikasi Lapor Jalan Rusak
+
+> **Dibawakan oleh**: [Nama Anggota UC1]
+> **Durasi Estimasi**: 2–3 menit
+> **Fokus**: Tujuan UC1, Dasar Varian UI, dan Alasan Pemilihan Metrik (Kenyamanan Jangkauan)
+
+---
+
+## ▶ PEMBUKA
+
+> *"Use Case pertama yang kita uji adalah UC1 — **Navigasi Mulai Melapor**.*
+>
+> *Pertanyaan utama yang ingin kita jawab di sini adalah: apakah peletakan tombol lapor berpengaruh terhadap kecepatan jangkauan dan kenyamanan pengguna saat mengklik tombol lapor tersebut?"*
+
+---
+
+## ▶ BAGIAN 1 — DASAR PENENTUAN UI VARIASI
+
+> **[Visual: Screenshot Varian A dan Varian B berdampingan]**
+
+> *"Di **Varian A**, tombol 'Lapor' ditempatkan di bagian atas pada **Navbar Header** — sebuah pola navigasi statis klasik yang sudah sangat umum digunakan di berbagai aplikasi web.*
+>
+> *Lalu, **mengapa Varian B memindahkan tombol ini ke bentuk Floating Action Button (FAB) melayang di kanan bawah?***
+>
+> *Keputusan ini didasari oleh prinsip **ergonomis penggunaan gawai mobile**. Berdasarkan riset ergonomi seluler (thumb zone), area bawah layar ponsel adalah area yang paling mudah dan nyaman dijangkau oleh ibu jari pengguna tanpa perlu mengubah posisi genggaman tangan.*
+>
+> *Oleh karena itu, kami berhipotesis bahwa Varian B dengan tombol FAB akan mempermudah jangkauan fisik pengguna secara signifikan dibandingkan dengan Varian A yang terletak di navbar atas.*
+>
+> *Pola FAB ini sendiri merupakan standar Material Design untuk memicu aksi utama di platform mobile, menjadikannya challenger yang sangat kuat.*
+>
+> *Tetapi apakah hipotesis kenyamanan jangkauan ini terbukti secara empiris pada pengguna nyata? Mari kita lihat penentuan metriknya."*
+
+---
+
+## ▶ BAGIAN 2 — METRIK DAN ALASAN PEMILIHANNYA
+
+> **[Visual: Tabel metrik UC1]**
+
+> *"Untuk mengevaluasi UC1 secara komprehensif, kami menggunakan dua metrik: **Time to First Click** dan **Skala Likert Kenyamanan 1–5**.*
+
+### Time to First Click (TTFC)
+
+> *"**Mengapa TTFC?***
+>
+> *TTFC merupakan metrik kegunaan (usability) kuantitatif yang paling objektif. Metrik ini mengukur kecepatan jangkauan user secara langsung (dalam satuan detik) sejak halaman dimuat hingga tombol lapor pertama kali diklik.*
+>
+> *Data waktu ini bebas dari bias opini subjektif partisipan. Jika Varian B (FAB) lebih cepat dijangkau oleh ibu jari, maka TTFC Varian B secara konsisten akan menunjukkan angka yang lebih kecil daripada Varian A.*
+
+### Likert 1–5 — Kenyamanan Menjangkau Tombol
+
+> *"**Mengapa Likert Kenyamanan ditambahkan setelah TTFC?***
+>
+> *Sebab, aspek kenyamanan bersifat subjektif dan tidak selalu berbanding lurus dengan kecepatan. Ada kemungkinan seorang pengguna dapat mengklik tombol di Navbar dengan cepat, tetapi secara motorik merasa kurang nyaman atau harus meregangkan jari terlalu jauh — dan perasaan pegal atau tidak nyaman ini tidak dapat direkam oleh stopwatch.*
+>
+> *Pertanyaan kuesioner Likert yang kami gunakan adalah: 'Seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan?' dengan rentang skor 1 (Sangat Tidak Nyaman) hingga 5 (Sangat Nyaman).*
+>
+> *Kami mengganti skala 3 poin sebelumnya menjadi 5 poin agar variasi data yang dihasilkan lebih sensitif untuk membedakan tingkat kenyamanan ergonomis di antara kedua variasi.*
+>
+> *Melalui kombinasi TTFC dan Skala Likert Kenyamanan ini, kami dapat menyimpulkan varian mana yang unggul baik secara performa kecepatan maupun kenyamanan ergonomis."*
+
+---
+
+## ▶ BAGIAN 3 — PROSEDUR UC1
+
+> *"Prosedur pengujian UC1 dirancang sangat ringkas karena tidak memerlukan proses input data teks.*
+>
+> *Setiap sesi dimulai dari halaman Beranda/Dashboard yang menjadi titik awal seragam untuk kedua varian. Hal ini penting agar area pandang awal partisipan sama.*
+>
+> *Instruksi yang dibacakan oleh moderator kepada partisipan adalah: 'Bayangkan Anda ingin melaporkan jalan rusak baru. Silakan klik tombol untuk mulai melapor.'*
+>
+> *Timer dimulai tepat setelah instruksi selesai dibacakan dan dihentikan begitu tombol diklik. Untuk menjaga objektivitas urutan pengerjaan, kami menerapkan metode counterbalancing di mana Grup 1 menguji Varian A terlebih dahulu, sementara Grup 2 menguji Varian B terlebih dahulu.*
+>
+> *Setelah menyelesaikan satu varian, partisipan langsung mengisi kuesioner Likert kenyamanan sebelum berlanjut ke varian berikutnya."*
+
+---
+
+> **[SELESAI — UC1]**
+> *"Selanjutnya, rekan saya akan memaparkan Use Case 2: Pengisian Form Pelaporan."*
