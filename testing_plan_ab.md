@@ -10,20 +10,20 @@ Dokumen ini mendokumentasikan skenario pengujian A/B testing untuk mengukur efek
 * **Varian B (Contextual FAB Entry Point):** Tombol lapor diletakkan dalam bentuk *Floating Action Button* (FAB) melayang di sudut kanan bawah layar, langsung di atas komponen Peta. Penempatan ini dirancang agar lebih mudah dijangkau dengan ibu jari (ergonomis) pada perangkat mobile.
 
 ### 2. Tujuan Pengujian
-Mengetahui apakah posisi peletakan tombol melapor berpengaruh secara signifikan terhadap kecepatan pengguna (*Time to First Click*) dan kenyamanan pengguna saat ingin memulai pelaporan jalan rusak.
+Mengetahui apakah peletakan tombol lapor berpengaruh terhadap kecepatan jangkauan user dalam klik tombol lapor.
 
 ### 3. Metrik Pengukuran
 
 | Metrik | Definisi Operasional | Cara Mengukur |
 | :--- | :--- | :--- |
-| **Time to First Click (TTFC)** | Waktu yang dibutuhkan pengguna sejak halaman dimuat hingga mengklik tombol untuk memulai laporan baru. | Diukur menggunakan *stopwatch* atau melalui analisis rekaman layar (dalam satuan detik/milidetik). |
-| **User Satisfaction (Skala Likert)** | Tingkat kemudahan dan kepuasan pengguna dalam menjangkau tombol pelaporan. | Diberikan kuesioner singkat setelah mencoba masing-masing varian. |
+| **Time to First Click (TTFC)** | Kecepatan user menjangkau tombol lapor (sejak halaman dimuat hingga mengklik tombol). | Diukur menggunakan *stopwatch* atau melalui analisis rekaman layar (dalam satuan detik/milidetik). |
+| **Satisfaction (Skala Likert)** | Kenyamanan user saat menjangkau tombol lapor. | Diberikan kuesioner singkat setelah mencoba masing-masing varian. |
 
 #### Pertanyaan Skala Likert:
-> **"Seberapa mudah kamu menjangkau tombol untuk memulai pelaporan?"**
+> **"Seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan?"**
 * **Skor 1:** Sulit dijangkau
-* **Skor 2:** Cukup mudah dijangkau
-* **Skor 3:** Sangat mudah dijangkau
+* **Skor 2:** Cukup di jangkau
+* **Skor 3:** Mudah dijangkau
 
 ---
 
@@ -86,5 +86,5 @@ Gunakan tabel di bawah ini untuk mencatat hasil pengujian dari setiap partisipan
 
 ### 6. Metode Analisis Data
 * **Kecepatan Akses (TTFC):** Bandingkan nilai rata-rata (*mean*) TTFC antara Varian A dan Varian B. Varian dengan nilai TTFC lebih kecil adalah yang lebih efisien bagi pengguna untuk memulai pelaporan.
-* **Kepuasan (Likert):** Bandingkan nilai rata-rata skor Likert kepuasan jangkauan tombol. Varian dengan skor lebih tinggi mendekati 3 dianggap memiliki jangkauan tombol yang lebih ergonomis dan memuaskan.
-* **Uji Hipotesis (Opsional):** Jika jumlah sampel partisipan mencukupi (misal $N \ge 10$), gunakan *Paired t-Test* or *Wilcoxon Signed-Rank Test* untuk melihat signifikansi perbedaan antara kedua varian tersebut.
+* **Kenyamanan (Likert):** Bandingkan nilai rata-rata skor Likert kenyamanan jangkauan tombol. Varian dengan skor lebih tinggi mendekati 3 dianggap memiliki jangkauan tombol yang lebih ergonomis dan nyaman bagi pengguna.
+* **Uji Hipotesis (Opsional):** Jika jumlah sampel partisipan mencukupi (misal $N \ge 10$), gunakan *Paired t-Test* atau *Wilcoxon Signed-Rank Test* untuk melihat signifikansi perbedaan antara kedua varian tersebut.
