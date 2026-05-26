@@ -21,9 +21,9 @@ Mengetahui apakah peletakan tombol lapor berpengaruh terhadap kecepatan jangkaua
 
 #### Pertanyaan Skala Likert:
 > **"Seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan?"**
-* **Skor 1:** Sulit dijangkau
-* **Skor 2:** Cukup di jangkau
-* **Skor 3:** Mudah dijangkau
+* **Skor 1:** Tidak Nyaman
+* **Skor 2:** Cukup Nyaman
+* **Skor 3:** Sangat Nyaman
 
 ---
 
