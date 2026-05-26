@@ -18,6 +18,8 @@ UC1 -- Navigasi Mulai Melapor
 3. Metrik Pengukuran:
    * Time to First Click (TTFC): Kecepatan user menjangkau tombol lapor (mulai dari halaman Beranda/Peta termuat hingga tombol diklik). Diukur menggunakan stopwatch atau rekaman layar (satuan detik).
    * Satisfaction (Skala Likert): Kenyamanan user saat menjangkau tombol lapor.
+   * Feedback Kualitatif (Pertanyaan Terbuka - Ditanyakan setelah mencoba kedua varian):
+     "Dari kedua posisi tombol lapor tadi (di navbar atas vs melayang di kanan bawah), mana yang paling kamu sukai dan apa alasannya?"
 
    Pertanyaan Skala Likert (UC1):
    "Seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan?"
@@ -28,8 +30,8 @@ UC1 -- Navigasi Mulai Melapor
    * Skor 5: Sangat Nyaman
 
 4. Prosedur Pelaksanaan (UC1):
-   * Grup 1: Buka Varian A -> Catat TTFC -> Isi Kuesioner Varian A -> Jeda -> Buka Varian B -> Catat TTFC -> Isi Kuesioner Varian B.
-   * Grup 2: Buka Varian B -> Catat TTFC -> Isi Kuesioner Varian B -> Jeda -> Buka Varian A -> Catat TTFC -> Isi Kuesioner Varian A.
+   * Grup 1: Buka Varian A -> Catat TTFC -> Isi Kuesioner Varian A -> Jeda -> Buka Varian B -> Catat TTFC -> Isi Kuesioner Varian B -> Ajukan Pertanyaan Terbuka.
+   * Grup 2: Buka Varian B -> Catat TTFC -> Isi Kuesioner Varian B -> Jeda -> Buka Varian A -> Catat TTFC -> Isi Kuesioner Varian A -> Ajukan Pertanyaan Terbuka.
 
 --------------------------------------------------------------------------------
 UC2 -- Pengisian Form Pelaporan
@@ -117,14 +119,14 @@ Template Lembar Pencatatan Data (Rekapitulasi)
 
 Salin tabel berikut ke aplikasi pengolah angka (Excel/Spreadsheet) Anda:
 
-ID | Grup | UC1: TTFC A (s) | UC1: Likert A (1-5) | UC1: TTFC B (s) | UC1: Likert B (1-5) | UC2: TTS A (s) | UC2: Likert A (1-5) | UC2: TTS B (s) | UC2: Likert B (1-5) | UC3: Likert A (1-5) | UC3: Faktual A (Betul/Salah) | UC3: Likert B (1-5) | UC3: Faktual B (Betul/Salah) | Catatan Kualitatif / Observasi
----|------|-----------------|---------------------|-----------------|---------------------|----------------|---------------------|----------------|---------------------|---------------------|-----------------------------|---------------------|-----------------------------|-------------------------------
-P01|Grup 1|                 |                     |                 |                     |                |                     |                |                     |                     |                             |                     |                             |
-P02|Grup 2|                 |                     |                 |                     |                |                     |                |                     |                     |                             |                     |                             |
-P03|Grup 1|                 |                     |                 |                     |                |                     |                |                     |                     |                             |                     |                             |
-P04|Grup 2|                 |                     |                 |                     |                |                     |                |                     |                     |                             |                     |                             |
-P05|Grup 1|                 |                     |                 |                     |                |                     |                |                     |                     |                             |                     |                             |
-P06|Grup 2|                 |                     |                 |                     |                |                     |                |                     |                     |                             |                     |                             |
+ID | Grup | UC1: TTFC A (s) | UC1: Likert A (1-5) | UC1: TTFC B (s) | UC1: Likert B (1-5) | UC1: Pref & Alasan | UC2: TTS A (s) | UC2: Likert A (1-5) | UC2: TTS B (s) | UC2: Likert B (1-5) | UC3: Likert A (1-5) | UC3: Faktual A (Betul/Salah) | UC3: Likert B (1-5) | UC3: Faktual B (Betul/Salah) | Catatan Kualitatif / Observasi
+---|------|-----------------|---------------------|-----------------|---------------------|--------------------|----------------|---------------------|----------------|---------------------|---------------------|-----------------------------|---------------------|-----------------------------|-------------------------------
+P01|Grup 1|                 |                     |                 |                     |                    |                |                     |                |                     |                     |                             |                     |                             |
+P02|Grup 2|                 |                     |                 |                     |                    |                |                     |                |                     |                     |                             |                     |                             |
+P03|Grup 1|                 |                     |                 |                     |                    |                |                     |                |                     |                     |                             |                     |                             |
+P04|Grup 2|                 |                     |                 |                     |                    |                |                     |                |                     |                     |                             |                     |                             |
+P05|Grup 1|                 |                     |                 |                     |                    |                |                     |                |                     |                     |                             |                     |                             |
+P06|Grup 2|                 |                     |                 |                     |                    |                |                     |                |                     |                     |                             |                     |                             |
 ---|------|-----------------|---------------------|-----------------|---------------------|----------------|---------------------|----------------|---------------------|---------------------|-----------------------------|---------------------|-----------------------------|-------------------------------
 Mean / Avg| [Rerata TTFC A] | [Rerata Likert A]   | [Rerata TTFC B] | [Rerata Likert B]   | [Rerata TTS A] | [Rerata Likert A]   | [Rerata TTS B] | [Rerata Likert B]   | [Rerata Likert A]   | [% Akurasi Jawaban A]        | [Rerata Likert B]   | [% Akurasi Jawaban B]        |
 

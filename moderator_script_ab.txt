@@ -62,6 +62,10 @@ Bagian 2: Pengujian UC1 -- Navigasi Mulai Melapor
      "Dari skala 1 sampai 5, seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan pada tampilan kedua tadi?"
      * Catat skor jawaban (1-5).
 
+* Langkah 3: Pertanyaan Terbuka (Kualitatif)
+  Tanyakan: "Dari kedua posisi tombol lapor tadi (di navbar atas pada tampilan pertama vs melayang di kanan bawah pada tampilan kedua), mana yang menurut kamu paling nyaman dan apa alasannya?"
+  * Catat kutipan verbal partisipan pada kolom "UC1: Pref & Alasan".
+
 
 [ Untuk Partisipan GRUP 2 (Urutan: Varian B -> Varian A) ]
 
@@ -86,6 +90,10 @@ Bagian 2: Pengujian UC1 -- Navigasi Mulai Melapor
   5. Kuesioner Likert A:
      "Dari skala 1 sampai 5, seberapa nyaman kamu menjangkau tombol untuk memulai pelaporan pada tampilan kedua tadi?"
      * Catat skor jawaban (1-5).
+
+* Langkah 3: Pertanyaan Terbuka (Kualitatif)
+  Tanyakan: "Dari kedua posisi tombol lapor tadi (melayang di kanan bawah pada tampilan pertama vs di navbar atas pada tampilan kedua), mana yang menurut kamu paling nyaman dan apa alasannya?"
+  * Catat kutipan verbal partisipan pada kolom "UC1: Pref & Alasan".
 
 --------------------------------------------------------------------------------
 Bagian 3: Pengujian UC2 -- Pengisian Form Pelaporan
