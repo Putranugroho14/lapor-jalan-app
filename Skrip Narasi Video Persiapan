@@ -1,0 +1,60 @@
+SKRIP NARASI VIDEO -- PERSIAPAN A/B TESTING
+
+Aplikasi Lapor Jalan Rusak
+
+Format Video: Presentasi slide / talking head / screen recording Durasi Estimasi: 5-8 menit Fokus Utama: Argumentasi mengapa setiap keputusan persiapan diambil
+
+
+► PEMBUKA (0:00 - 0:30)
+
+"Sebelum masuk ke proses pengujian, ada serangkaian persiapan yang harus dilakukan dengan cermat. Persiapan ini bukan sekadar formalitas — setiap keputusan yang kita ambil di tahap ini akan langsung mempengaruhi validitas dan relevansi data yang kita hasilkan nanti.
+Di video ini, kita akan membahas lima aspek persiapan: Tujuan, Dasar Penentuan Varian UI, Metrik, Partisipan, dan Prosedur — dan yang lebih penting, kita akan bahas mengapa setiap keputusan itu diambil."
+
+
+► SEGMEN 1 -- TUJUAN (0:30 - 1:30)
+
+[Visual: Slide judul "Tujuan Eksperimen"]
+
+"Pertama, tujuan eksperimen. Kita membagi pengujian ini ke dalam tiga use case utama.
+Untuk Use Case 1, tujuannya adalah mengetahui apakah peletakan tombol lapor berpengaruh terhadap kecepatan dan kenyamanan jangkauan user dalam klik tombol lapor.
+Untuk Use Case 2, tujuannya adalah mengetahui apakah format form berpengaruh terhadap kecepatan pengisian dan kenyamanan yang dirasakan user.
+Dan untuk Use Case 3, tujuannya adalah mengetahui apakah format tampilan status laporan memengaruhi kenyamanan pengguna saat memantau progres laporan.
+Kenapa tujuan ini dibuat spesifik per use case? Karena masing-masing bagian menguji hipotesis desain yang berbeda."
+
+
+► SEGMEN 2 -- DASAR PENENTUAN VARIAN UI (1:30 - 3:00)
+
+[Visual: Slide judul "Dasar Penentuan Varian UI"]
+
+"Kedua, dasar penentuan varian UI. Mengapa varian-varian ini yang kita pilih untuk diuji?
+Pada Use Case 1, kita membandingkan Varian A yaitu Navbar, dengan Varian B yaitu Floating Action Button atau FAB. Tombol navbar mewakili peletakan klasik di bagian atas, sedangkan FAB dirancang agar lebih mudah dijangkau dengan ibu jari (ergonomis) di perangkat mobile.
+Pada Use Case 2, kita membandingkan Form Satu Halaman penuh dengan Form 3 Langkah (wizard). Form panjang sering kali memicu kelelahan visual, sementara form bertahap memecah beban informasi agar terasa lebih ringan.
+Pada Use Case 3, kita membandingkan Badge Teks Statis dengan Timeline Visual Interaktif. Kita ingin membuktikan apakah timeline visual benar-benar meningkatkan kenyamanan pemantauan atau hanya memberikan efek estetika sementara."
+
+
+► SEGMEN 3 -- METRIK (3:00 - 4:30)
+
+[Visual: Slide judul "Metrik Pengukuran"]
+
+"Ketiga, metrik yang kita gunakan. Kita menggunakan kombinasi metrik objektif (waktu) dan metrik subjektif (skala kenyamanan).
+Pada Use Case 1, metrik objektifnya adalah Time to First Click atau TTFC. Pada Use Case 2, metriknya adalah Time to Submit atau TTS. Waktu ini diukur menggunakan perekam layar atau stopwatch secara presisi.
+Sedangkan metrik subjektif yang kita gunakan adalah Skala Likert 5 tingkat untuk mengukur tingkat kenyamanan. Kenapa 5 tingkat? Skala 1 sampai 5 memberikan variasi data yang lebih baik untuk analisis statistik dibandingkan skala 3 tingkat.
+Khusus untuk Use Case 3, kita juga menambahkan pertanyaan faktual. Analisis silang antara skor kenyamanan subjektif dan kebenaran jawaban faktual ini penting untuk mendeteksi Novelty Effect. Jika pengguna menilai Varian B sangat nyaman tetapi salah menjawab pertanyaan faktual tentang status laporannya, itu tandanya pengguna hanya menyukai visualnya yang baru tanpa benar-benar memahami informasinya."
+
+
+► SEGMEN 4 -- PARTISIPAN & PROSEDUR (4:30 - 6:30)
+
+[Visual: Slide judul "Partisipan dan Prosedur"]
+
+"Keempat dan kelima, partisipan dan prosedur eksperimen.
+Kita melibatkan 16 partisipan dengan metode Within-Subject Design, di mana setiap orang mencoba kedua variasi desain. Ini meminimalkan perbedaan latar belakang kemampuan partisipan karena mereka membandingkan langsung kedua varian.
+Untuk menghindari bias urutan atau efek pembelajaran, kita menerapkan Counterbalancing. Partisipan dibagi menjadi dua grup: Grup 1 menguji Varian A dulu baru B, sementara Grup 2 menguji Varian B dulu baru A.
+Kami juga memberlakukan standardisasi data masukan untuk pengisian formulir di Use Case 2. Semua partisipan diberikan teks laporan dan foto yang sama untuk diinput, sehingga murni mengukur performa tata letak form tanpa dipengaruhi perbedaan kecepatan mengetik masing-masing individu."
+
+
+► PENUTUP (6:30 - 7:30)
+
+[Visual: Slide Penutup - Terima Kasih]
+
+"Dengan persiapan dan metodologi eksperimen yang matang ini, kami dapat memastikan hasil pengujian A/B testing ini akan valid, andal, dan mampu memberikan rekomendasi desain terbaik untuk aplikasi LaporJalan.
+Terima kasih banyak atas perhatian Anda."
